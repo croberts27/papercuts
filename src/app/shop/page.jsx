@@ -2,47 +2,97 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import freakyLady from '@/images/avatar.jpg'
+import crazyLegs from '@/images/portrait.jpg'
+import tiddies from '@/images/tiddy_ski.JPG'
+import diner from '@/images/diner.JPG'
+import eyes from '@/images/freaky_eyes.JPG'
+import smokes from '@/images/mr_smokes.JPG'
+import street from '@/images/funky_street.JPG'
+import legsForDays from '@/images/legs_legs_legs.JPG'
+import BMW from '@/images/bmw.JPG'
 
 const art = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    name: 'B&W Freaky Lady',
+    description: 'Oh shit this lady freaky!!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: freakyLady,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'Crazy Legs',
+    description: 'Wild, crazy legs maaan!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: crazyLegs,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    name: 'Tiddy Ski',
+    description: 'Oh shit this lady skiing with her tiddies out!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: tiddies,
   },
   {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    name: 'Diner',
+    description: 'Just a diner, man.',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: diner,
   },
   {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'Freaky Eyes',
+    description: 'Oh shit these eyes are freaky!!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: eyes,
+  },
+  {
+    name: 'Mr. Smokes',
+    description: 'Mr. Smokes, maan. ',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: smokes,
+  },
+  {
+    name: 'Street',
+    description: 'What a street!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: street,
+  },
+  {
+    name: 'BMW Land',
+    description: 'Vroooooom!',
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: BMW,
+  },
+  {
+    name: 'Legs For Dayz',
+    description: "Legs don't stop",
+    link: {
+      href: 'https://www.instagram.com/papercuts_collage/',
+      label: 'For Sale',
+    },
+    logo: legsForDays,
   },
 ]
 
@@ -65,8 +115,8 @@ export const metadata = {
 export default function Shop() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little arts over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="PAPERCUTS FOR SALE"
+      className="flex flex-wrap content-center justify-center"
     >
       <ul
         role="list"
@@ -78,7 +128,7 @@ export default function Shop() {
               <Image
                 src={art.logo}
                 alt=""
-                className="h-8 w-8"
+                className="object-fill"
                 unoptimized
               />
             </div>
