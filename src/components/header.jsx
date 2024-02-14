@@ -8,7 +8,7 @@ const navigation = [
   { name: "Projects", href: "#" },
 ];
 
-export default function Example() {
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -84,3 +84,4 @@ export default function Example() {
     </header>
   );
 }
+export default Header
