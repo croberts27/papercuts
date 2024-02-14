@@ -4,8 +4,7 @@ const products = [
     name: "apocalypse at the state",
     href: "#",
     price: "$48",
-    imageSrc:
-      "src/images/apocalypse-at-the-state.JPG",
+    imageSrc: "/images/apocalypse-at-the-state.JPG",
     imageAlt:
       "apocalypse at the state is collage of donald trump with small hands and a tiny penis.",
   },
@@ -14,112 +13,89 @@ const products = [
     name: "butterfly eyes",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/butterfly-eyes.JPG",
-    imageAlt:
-      "butterfly with human eyes",
+    imageSrc: "/images/butterfly-eyes.JPG",
+    imageAlt: "butterfly with human eyes",
   },
   {
     id: 3,
     name: "crazy legs",
     href: "#",
     price: "$89",
-    imageSrc:
-      "src/images/crazy-legs.PNG",
-    imageAlt:
-      "crazy legs smoking cig",
+    imageSrc: "/images/crazy-legs.PNG",
+    imageAlt: "crazy legs smoking cig",
   },
   {
     id: 4,
     name: "dont talk to me",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/dont-talk-to-me.JPG",
-    imageAlt:
-      "dont talk to me cactus",
+    imageSrc: "/images/dont-talk-to-me.JPG",
+    imageAlt: "dont talk to me cactus",
   },
   {
     id: 5,
     name: "flower ladies",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/flower-ladies.JPG",
-    imageAlt:
-      "flower ladies",
+    imageSrc: "/images/flower-ladies.JPG",
+    imageAlt: "flower ladies",
   },
   {
     id: 6,
     name: "lady-one-eye",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/lady-one-eye-bw.PNG",
-    imageAlt:
-      "one eyed lady in b&w",
+    imageSrc: "/images/lady-one-eye-bw.PNG",
+    imageAlt: "one eyed lady in b&w",
   },
   {
     id: 7,
     name: "no",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/no.JPG",
-    imageAlt:
-      "no",
+    imageSrc: "/images/no.JPG",
+    imageAlt: "no",
   },
   {
     id: 8,
     name: "seashell lady",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/seashell-lady.JPG",
-    imageAlt:
-      "seashell lady",
+    imageSrc: "/images/seashell-lady.JPG",
+    imageAlt: "seashell lady",
   },
   {
     id: 9,
     name: "smokes",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/smokes.JPG",
-    imageAlt:
-      "man smoking 5 cigs at once",
+    imageSrc: "/images/smokes.JPG",
+    imageAlt: "man smoking 5 cigs at once",
   },
   {
     id: 10,
     name: "space towel",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/space-towel.JPG",
-    imageAlt:
-      "lady in space in a towel",
+    imageSrc: "/images/space-towel.JPG",
+    imageAlt: "lady in space in a towel",
   },
   {
     id: 11,
     name: "tiddy ski",
     href: "#",
     price: "$35",
-    imageSrc:
-      "src/images/tiddy-ski.JPG",
-    imageAlt:
-      "lady with tits out holding a pair of ski's",
+    imageSrc: "/images/tiddy-ski.JPG",
+    imageAlt: "lady with tits out holding a pair of ski's",
   },
   {
     id: 12,
     name: "trippy screens",
     href: "#",
     price: "$39",
-    imageSrc:
-      "src/images/trippy-screens.JPG",
-    imageAlt:
-      "crazy tv screens",
+    imageSrc: "/images/trippy-screens.JPG",
+    imageAlt: "crazy tv screens",
   },
-
 ];
 
 function Shop() {
