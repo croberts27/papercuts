@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 function Header() {
+  // basic use state for mobile menu
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -12,7 +13,7 @@ function Header() {
         className="flex items-center justify-between -mx-1.5 p-4 lg:px-8"
         aria-label="Global"
       >
-        <Link to="/about" className="-m-1.5 p-1.5">
+        <Link to="/" className="-m-1.5 p-1.5">
           <span className="text-black font-bold">papercuts</span>
         </Link>
         <div className="flex lg:hidden">
@@ -28,6 +29,7 @@ function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {/* using Link component instead of <a> tags */}
+          {/* linking to other pages */}
           <Link
             to="/"
             target=""
@@ -51,6 +53,7 @@ function Header() {
           </Link>
         </div>
       </nav>
+      {/*  */}
       <Dialog
         as="div"
         className="lg:hidden"
@@ -61,7 +64,7 @@ function Header() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             {/* link back to home page */}
-            <Link to="/shop" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="text-black font-bold">papercuts</span>
             </Link>
             <button
