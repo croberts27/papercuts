@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const navigation = [
-  { name: "About", href: "#" },
-  { name: "Collage", href: "#" },
-  { name: "Projects", href: "#" },
-];
+import { Link } from "react-router-dom";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,9 +12,9 @@ function Header() {
         className="flex items-center justify-between -mx-1.5 p-4 lg:px-8"
         aria-label="Global"
       >
-        <a href="#" className="-m-1.5 p-1.5">
+        <Link to="/about" className="-m-1.5 p-1.5">
           <span className="text-black font-bold">papercuts</span>
-        </a>
+        </Link>
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -32,15 +27,27 @@ function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              {item.name}
-            </a>
-          ))}
+          <Link
+            to="/"
+            target=""
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            About
+          </Link>
+          <Link
+            to="/shop"
+            target=""
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Shop
+          </Link>
+          <Link
+            to="/projects"
+            target=""
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Projects
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -52,9 +59,10 @@ function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            {/* link back to home page */}
+            <Link to="/shop" className="-m-1.5 p-1.5">
               <span className="text-black font-bold">papercuts</span>
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -67,15 +75,27 @@ function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                <Link
+                  target=""
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  About
+                </Link>
+                <Link
+                  target=""
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Shop
+                </Link>
+                <Link
+                  target=""
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Projects
+                </Link>
               </div>
             </div>
           </div>
@@ -84,4 +104,4 @@ function Header() {
     </header>
   );
 }
-export default Header
+export default Header;
