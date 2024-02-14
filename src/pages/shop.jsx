@@ -1,50 +1,130 @@
 const products = [
   {
     id: 1,
-    name: "Earthen Bottle",
+    name: "apocalypse at the state",
     href: "#",
     price: "$48",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+      "src/images/apocalypse-at-the-state.JPG",
     imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "apocalypse at the state is collage of donald trump with small hands and a tiny penis.",
   },
   {
     id: 2,
-    name: "Nomad Tumbler",
+    name: "butterfly eyes",
     href: "#",
     price: "$35",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+      "src/images/butterfly-eyes.JPG",
     imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "butterfly with human eyes",
   },
   {
     id: 3,
-    name: "Focus Paper Refill",
+    name: "crazy legs",
     href: "#",
     price: "$89",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
+      "src/images/crazy-legs.PNG",
     imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
+      "crazy legs smoking cig",
   },
   {
     id: 4,
-    name: "Machined Mechanical Pencil",
+    name: "dont talk to me",
     href: "#",
     price: "$35",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
+      "src/images/dont-talk-to-me.JPG",
     imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+      "dont talk to me cactus",
   },
-  // More products...
+  {
+    id: 5,
+    name: "flower ladies",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/flower-ladies.JPG",
+    imageAlt:
+      "flower ladies",
+  },
+  {
+    id: 6,
+    name: "lady-one-eye",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/lady-one-eye-bw.PNG",
+    imageAlt:
+      "one eyed lady in b&w",
+  },
+  {
+    id: 7,
+    name: "no",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/no.JPG",
+    imageAlt:
+      "no",
+  },
+  {
+    id: 8,
+    name: "seashell lady",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/seashell-lady.JPG",
+    imageAlt:
+      "seashell lady",
+  },
+  {
+    id: 9,
+    name: "smokes",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/smokes.JPG",
+    imageAlt:
+      "man smoking 5 cigs at once",
+  },
+  {
+    id: 10,
+    name: "space towel",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/space-towel.JPG",
+    imageAlt:
+      "lady in space in a towel",
+  },
+  {
+    id: 11,
+    name: "tiddy ski",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "src/images/tiddy-ski.JPG",
+    imageAlt:
+      "lady with tits out holding a pair of ski's",
+  },
+  {
+    id: 12,
+    name: "trippy screens",
+    href: "#",
+    price: "$39",
+    imageSrc:
+      "src/images/trippy-screens.JPG",
+    imageAlt:
+      "crazy tv screens",
+  },
+
 ];
 
 function Shop() {
   return (
-    <div className="bg-white">
+    <div className="bg-pink-50">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 

@@ -4,13 +4,16 @@ import "./main.css";
 import Header from "./components/header";
 import Error from "./pages/404.jsx";
 import Shop from "./pages/shop.jsx";
+import About from "./pages/about.jsx";
 function App() {
   return (
     <Router>
       <>
         <Header />
         <Routes>
+          <Route path="/" element={<About />} />
           <Route path="/shop" element={<Shop />} />
+
           <Route path="*" element={<Error />} />
         </Routes>
       </>
