@@ -10,18 +10,8 @@ function App() {
       <>
         <Header />
         <Routes>
-          <Route
-            target="_blank"
-            rel="noopener noreferrer"
-            path="/shop"
-            element={Shop}
-          />
-          <Route
-            target="_blank"
-            rel="noopener noreferrer"
-            path=""
-            element={Error}
-          />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </>
     </Router>

@@ -27,6 +27,7 @@ function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
+          {/* using Link component instead of <a> tags */}
           <Link
             to="/"
             target=""
