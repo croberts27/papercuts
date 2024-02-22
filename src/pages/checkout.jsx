@@ -2,14 +2,9 @@ function Checkout() {
   return (
     <main>
       <section className="relative block" style={{ height: "500px" }}>
-        <div className="absolute top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
-          <span
-            id="LogoPinkOverlay"
-            className="w-full h-full absolute opacity-10 bg-logo-pink"
-          ></span>
-        </div>
+        <div className="absolute top-0 w-full h-full bg-center bg-cover bg-pink-50"></div>
       </section>
-      <section className="relative py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
+      <section className="relative py-16 bg-pink-50">
         <div className="container mx-auto">
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-80">
             <div className="px-6">
@@ -27,7 +22,6 @@ function Checkout() {
                         <button
                           className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
                           type="submit"
-                          onClick={() => setShow(true)}
                         >
                           Buy now
                         </button>

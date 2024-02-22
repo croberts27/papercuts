@@ -44,7 +44,7 @@ function About() {
           <img
             src="/images/papercuts.JPG"
             alt="papercuts portrait"
-            className="absolute inset-12 pt-20 h-75% w-75% object-cover"
+            className="absolute inset-20 pt-20 h-3/4 w-3/4 object-cover"
           />
         </div>
       </div>
