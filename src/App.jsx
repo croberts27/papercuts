@@ -5,7 +5,8 @@ import Header from "./components/header";
 import Error from "./pages/404.jsx";
 import Shop from "./pages/shop.jsx";
 import About from "./pages/about.jsx";
-import Checkout from "./pages/checkout.jsx";
+import Product from "./pages/product.jsx";
+
 function App() {
   return (
     <Router>
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </>
