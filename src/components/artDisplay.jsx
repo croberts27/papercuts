@@ -1,7 +1,0 @@
-function artDisplay (){
-    return (
-        <>
-        
-        </>
-    )
-}

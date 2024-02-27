@@ -2,7 +2,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { products } from "./shop";
-
+import Purchase from "../components/purchase";
 function Product() {
   // Access the product ID from the URL params
   let { productId } = useParams();
@@ -19,7 +19,9 @@ function Product() {
 
   return (
     <main>
+      <Purchase />
       <div className="flex flex-wrap items-end align-middle justify-evenly bg-pink-50">
+        
         <h2 className="font-bold">Title: {product.name}</h2>
         <img
           className="w-1/3 h-1/3 my-10 "
