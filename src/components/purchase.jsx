@@ -6,16 +6,20 @@ import {
 } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
-import product from "../pages/product";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { products } from "../pages/shop";
 
 function Purchase() {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
+  // Find the product object from the products array based on the ID
+  const product = products.find(
+    (product) => product.id === parseInt(productId)
+  );
+
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-pink-50">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
           <div className="lg:max-w-lg lg:self-end">
@@ -50,7 +54,7 @@ function Purchase() {
               </div>
 
               <div className="mt-4 space-y-6">
-                <p className="text-base text-gray-500">{product.description}</p>
+                <p className="text-base text-gray-500">{product.imageSrc}</p>
               </div>
 
               <div className="mt-6 flex items-center">
@@ -58,7 +62,7 @@ function Purchase() {
                   className="h-5 w-5 flex-shrink-0 text-green-500"
                   aria-hidden="true"
                 />
-                <p className="ml-2 text-sm text-gray-500">
+                <p className="ml-2 text-center text-sm text-gray-500">
                   In stock and ready to ship
                 </p>
               </div>
