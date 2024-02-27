@@ -6,14 +6,15 @@ import {
 } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
-import { products } from "../pages/shop";
+import { product } from "../pages/shop";
 
 function Purchase() {
+  // eslint-disable-next-line no-unused-vars
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
   // Find the product object from the products array based on the ID
-  const product = products.find(
+  const products = product.find(
     (product) => product.id === parseInt(productId)
   );
 
@@ -29,7 +30,7 @@ function Purchase() {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {product.name}
+                {products.name}
               </h1>
             </div>
 
@@ -40,7 +41,7 @@ function Purchase() {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {product.price}
+                  {products.price}
                 </p>
 
                 <div className="ml-4 border-l border-gray-300 pl-4">
@@ -54,7 +55,7 @@ function Purchase() {
               </div>
 
               <div className="mt-4 space-y-6">
-                <p className="text-base text-gray-500">{product.imageSrc}</p>
+                <p className="text-base text-gray-500">{products.imageSrc}</p>
               </div>
 
               <div className="mt-6 flex items-center">
