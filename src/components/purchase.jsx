@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { products } from "../pages/shop";
 function Purchase({ productId }) {
   // Find the product object from the products array based on the ID
@@ -17,6 +18,7 @@ function Purchase({ productId }) {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {/* product name conditions */}
                 {product ? product.name : "Product not found"}
               </h1>
             </div>
@@ -28,11 +30,11 @@ function Purchase({ productId }) {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {product ? product.price : ""}
+                  {/* pricing conditions */}
+                  {product ? product.price : "???"}
                 </p>
 
                 <div className="ml-4 border-l border-gray-300 pl-4">
-                  <h2 className="sr-only">Reviews</h2>
                   <div className="flex items-center">
                     <div>
                       <div className="flex items-center"></div>
@@ -42,11 +44,17 @@ function Purchase({ productId }) {
               </div>
 
               <div className="mt-6 flex items-center">
-                
-                <p className="ml-2 text-center text-sm text-gray-500">
-                  In stock and ready to ship
+                <p className="text-center text-md text-gray-800">
+                  In stock and ready to ship!
                 </p>
               </div>
+              <br></br>
+              <button
+                type="submit"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-pink-400 px-8 py-3 text-base font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 focus:ring-offset-gray-50"
+              >
+                Add to cart
+              </button>
             </section>
           </div>
 

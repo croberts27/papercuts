@@ -18,10 +18,10 @@ function Product() {
 
   return (
     <main>
-      <div className="flex flex-wrap  justify-evenly bg-pink-50">
+      <div className="flex flex-wrap justify-evenly bg-pink-50">
         <Purchase productId={productId} />
         <img
-          className="w-1/3 h-1/3 my-10 "
+          className="w-1/3 h-1/3 my-10 rounded-md"
           src={product.imageSrc}
           alt={product.imageAlt}
         />
