@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
-import { product } from "../pages/shop";
+import { products } from "../pages/shop";
 
 function Purchase() {
   // eslint-disable-next-line no-unused-vars
@@ -14,8 +14,9 @@ function Purchase() {
     return classes.filter(Boolean).join(" ");
   }
   // Find the product object from the products array based on the ID
-  const products = product.find(
-    (product) => product.id === parseInt(productId)
+  // eslint-disable-next-line no-undef
+  const product = products.find(
+    (products) => products.id === parseInt(productId)
   );
 
   return (
@@ -30,7 +31,7 @@ function Purchase() {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {products.name}
+                {product.name}
               </h1>
             </div>
 
@@ -41,7 +42,7 @@ function Purchase() {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {products.price}
+                  {product.price}
                 </p>
 
                 <div className="ml-4 border-l border-gray-300 pl-4">
@@ -55,7 +56,7 @@ function Purchase() {
               </div>
 
               <div className="mt-4 space-y-6">
-                <p className="text-base text-gray-500">{products.imageSrc}</p>
+                <p className="text-base text-gray-500">{product.imageSrc}</p>
               </div>
 
               <div className="mt-6 flex items-center">

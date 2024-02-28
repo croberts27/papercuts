@@ -2,7 +2,7 @@
 // imports
 import { Link } from "react-router-dom";
 
-export const product = [
+export const products = [
   {
     id: 1,
     name: "apocalypse at the state",
@@ -109,7 +109,7 @@ function Shop() {
         <h2 className="sr-only">Products</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {product.map((product) => (
+          {products.map((product) => (
             <Link
               key={product.id}
               to={`/product/${product.id}`}
