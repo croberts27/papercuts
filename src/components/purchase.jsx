@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { products } from "../pages/shop";
+
 function Purchase({ productId }) {
   // Find the product object from the products array based on the ID
   const product = products.find(
@@ -57,7 +58,6 @@ function Purchase({ productId }) {
               </button>
             </section>
           </div>
-
           {/* Product image */}
           <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg"></div>
