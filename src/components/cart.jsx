@@ -3,7 +3,7 @@ import { products } from "../pages/shop";
 
 function Cart() {
   return (
-    <div className="bg-white">
+    <div className="bg-pink-100">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Shopping Cart
@@ -15,7 +15,7 @@ function Cart() {
 
             <ul
               role="list"
-              className="divide-y divide-gray-200 border-b border-t border-gray-200"
+              className="divide-y divide-gray-200 border-b border-t border-black"
             >
               {products.map((product, productIdx) => (
                 <li key={product.id} className="flex py-6 sm:py-10">
@@ -78,7 +78,7 @@ function Cart() {
 
                         <button
                           type="button"
-                          className="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-3"
+                          className="ml-4 text-sm font-medium text-black hover:text-pink-500 sm:ml-0 sm:mt-3"
                         >
                           <span>Remove</span>
                         </button>
