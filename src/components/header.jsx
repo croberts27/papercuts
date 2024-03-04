@@ -38,18 +38,18 @@ function Header() {
             About
           </Link>
           <Link
-            to="/shop"
+            to="/available-prints"
             target=""
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Shop
+            Available Prints
           </Link>
           <Link
-            to="/projects"
+            to="/art"
             target=""
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Projects
+            Art
           </Link>
         </div>
       </nav>
