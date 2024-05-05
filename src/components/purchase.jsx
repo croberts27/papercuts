@@ -7,6 +7,7 @@ function Purchase({ productId }) {
     (product) => product.id === parseInt(productId)
   );
 
+
   return (
     <>
       <div className="bg-pink-50">
@@ -51,7 +52,7 @@ function Purchase({ productId }) {
               </div>
               <br></br>
               <button
-                type="submit"
+                type="submit" id="atc"
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-pink-400 px-8 py-3 text-base font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 focus:ring-offset-gray-50"
               >
                 Add to cart
