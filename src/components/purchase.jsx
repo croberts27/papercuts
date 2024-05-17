@@ -55,16 +55,6 @@ function Purchase({ productId }) {
               </button>
             </section>
           </div>
-          {/* Product image */}
-          <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
-              <img
-                src={product.imageSrc}
-                alt={product.imageAlt}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </>
