@@ -15,6 +15,7 @@ function Product() {
     return <div>Product not found</div>;
   }
 
+  // eslint-disable-next-line no-unused-vars
   const handleAddToCart = () => {
     addToCart(product);
   };

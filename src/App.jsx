@@ -8,6 +8,7 @@ import Product from "./pages/product.jsx";
 import Review from "./pages/review.jsx";
 import Art from "./pages/art.jsx";
 import Checkout from "./pages/checkout.jsx";
+import Payment from "./pages/payment.jsx";
 import { CartProvider } from "./context/CartContext";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/order-review" element={<Review />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </>

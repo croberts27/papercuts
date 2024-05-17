@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'dpurp': "#ff66c4",
-      'pink': '#fdf1f8',
-      'teal': "#f1fdf6",
-    }
+      dpurp: "#ff66c4",
+      pink: "#fdf1f8",
+      teal: "#f1fdf6",
+      black: "#000000",
+    },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")]
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

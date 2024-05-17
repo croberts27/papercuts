@@ -4,7 +4,7 @@ function Checkout() {
   const { cartItems } = useCart();
 
   return (
-    <div className="bg-pink mx-auto">
+    <div className="bg-pink min-h-screen mx-auto">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Checkout
@@ -17,7 +17,7 @@ function Checkout() {
             role="list"
             className="divide-y divide-gray-200 border-b border-t border-black"
           >
-            {cartItems.map((product, idx) => (
+            {cartItems.map((product) => (
               <li key={product.id} className="flex py-6 sm:py-10">
                 <div className="flex-shrink-0">
                   <img

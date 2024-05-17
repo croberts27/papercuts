@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import { products } from "../pages/shop";
 import { useCart } from "../context/CartContext";
