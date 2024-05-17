@@ -1,12 +1,17 @@
-/* eslint-disable react/prop-types */
 import { products } from "../pages/shop";
+import { useCart } from "../context/CartContext";
 
 function Purchase({ productId }) {
+  const { addToCart } = useCart();
+
   // Find the product object from the products array based on the ID
   const product = products.find(
     (product) => product.id === parseInt(productId)
   );
 
+  if (!product) {
+    return <div>Product not found</div>;
+  }
 
   return (
     <>
@@ -20,8 +25,7 @@ function Purchase({ productId }) {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {/* product name conditions */}
-                {product ? product.name : "Product not found"}
+                {product.name}
               </h1>
             </div>
 
@@ -32,17 +36,8 @@ function Purchase({ productId }) {
 
               <div className="flex items-center">
                 <p className="text-lg text-gray-900 sm:text-xl">
-                  {/* pricing conditions */}
-                  {product ? product.price : "???"}
+                  {product.price}
                 </p>
-
-                <div className="ml-4 border-l border-gray-300 pl-4">
-                  <div className="flex items-center">
-                    <div>
-                      <div className="flex items-center"></div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div className="mt-6 flex items-center">
@@ -52,7 +47,8 @@ function Purchase({ productId }) {
               </div>
               <br></br>
               <button
-                type="submit" id="atc"
+                type="button"
+                onClick={() => addToCart(product)}
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-pink-400 px-8 py-3 text-base font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 focus:ring-offset-gray-50"
               >
                 Add to cart
@@ -61,11 +57,14 @@ function Purchase({ productId }) {
           </div>
           {/* Product image */}
           <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg"></div>
+            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
+              <img
+                src={product.imageSrc}
+                alt={product.imageAlt}
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
           </div>
-
-          {/* Product form */}
-          <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start"></div>
         </div>
       </div>
     </>

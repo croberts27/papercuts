@@ -1,9 +1,11 @@
 import { CheckIcon, ClockIcon } from "@heroicons/react/20/solid";
-import { products } from "../pages/shop";
+import { useCart } from "../context/CartContext";
 
 function Cart() {
+  const { cartItems, removeFromCart } = useCart();
+
   return (
-    <div className="bg-blue-400">
+    <div className="bg-blue-200">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Shopping Cart
@@ -17,7 +19,7 @@ function Cart() {
               role="list"
               className="divide-y divide-gray-200 border-b border-t border-black"
             >
-              {products.map((product, productIdx) => (
+              {cartItems.map((product, productIdx) => (
                 <li key={product.id} className="flex py-6 sm:py-10">
                   <div className="flex-shrink-0">
                     <img
@@ -78,6 +80,7 @@ function Cart() {
 
                         <button
                           type="button"
+                          onClick={() => removeFromCart(product.id)}
                           className="ml-4 text-sm font-medium text-black hover:text-pink-500 sm:ml-0 sm:mt-3"
                         >
                           <span>Remove</span>
@@ -117,26 +120,7 @@ function Cart() {
 
               <div className="flow-root">
                 <dl className="-my-4 divide-y divide-gray-200 text-sm">
-                  <div className="flex items-center justify-between py-4">
-                    <dt className="text-gray-600">Subtotal</dt>
-                    <dd className="font-medium text-gray-900">$99.00</dd>
-                  </div>
-                  <div className="flex items-center justify-between py-4">
-                    <dt className="text-gray-600">Shipping</dt>
-                    <dd className="font-medium text-gray-900">$5.00</dd>
-                  </div>
-                  <div className="flex items-center justify-between py-4">
-                    <dt className="text-gray-600">Tax</dt>
-                    <dd className="font-medium text-gray-900">$8.32</dd>
-                  </div>
-                  <div className="flex items-center justify-between py-4">
-                    <dt className="text-base font-medium text-gray-900">
-                      Order total
-                    </dt>
-                    <dd className="text-base font-medium text-gray-900">
-                      $112.32
-                    </dd>
-                  </div>
+                  {/* Add your dynamic calculation for Subtotal, Shipping, Tax, and Total */}
                 </dl>
               </div>
             </div>
@@ -167,4 +151,5 @@ function Cart() {
     </div>
   );
 }
+
 export default Cart;

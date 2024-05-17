@@ -1,4 +1,3 @@
-// App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./main.css";
 import Header from "./components/header";
@@ -9,23 +8,26 @@ import Product from "./pages/product.jsx";
 import Review from "./pages/review.jsx";
 import Art from "./pages/art.jsx";
 import Checkout from "./pages/checkout.jsx";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <Router>
-      <>
-        <Header />
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/available-prints" element={<Shop />} />
-          <Route path="/art" element={<Art />} />
-          <Route path="/order-review" element={<Review />} />
-          <Route path="/product/:productId" element={<Product />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </>
-    </Router>
+    <CartProvider>
+      <Router>
+        <>
+          <Header />
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/available-prints" element={<Shop />} />
+            <Route path="/art" element={<Art />} />
+            <Route path="/order-review" element={<Review />} />
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </>
+      </Router>
+    </CartProvider>
   );
 }
 
