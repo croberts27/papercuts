@@ -8,6 +8,7 @@ import About from "./pages/about.jsx";
 import Product from "./pages/product.jsx";
 import Review from "./pages/review.jsx";
 import Art from "./pages/art.jsx";
+import Checkout from "./pages/checkout.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/art" element={<Art />} />
           <Route path="/order-review" element={<Review />} />
           <Route path="/product/:productId" element={<Product />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </>

@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 // imports
 import { Link } from "react-router-dom";
-
 export const products = [
   {
     id: 1,
@@ -115,6 +114,7 @@ function Shop() {
               to={`/product/${product.id}`}
               className="group"
             >
+              
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
                   src={product.imageSrc}
