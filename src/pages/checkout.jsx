@@ -4,7 +4,7 @@ function Checkout() {
   const { cartItems } = useCart();
 
   return (
-    <div className="bg-blue-200">
+    <div className="bg-pink mx-auto">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Checkout
@@ -58,6 +58,12 @@ function Checkout() {
               </li>
             ))}
           </ul>
+          <button
+            type="submit"
+            className="w-full mt-3 rounded-md border border-transparent bg-teal px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-dpurp focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-pink"
+          >
+            Continue to Payment
+          </button>
         </div>
       </div>
     </div>

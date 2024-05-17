@@ -34,7 +34,7 @@ function CartIcon() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg">
+        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg bg-dpurp shadow-lg">
           <div className="p-4">
             {cartItems.length > 0 ? (
               <ul>
@@ -50,7 +50,7 @@ function CartIcon() {
             )}
             <Link
               to="/checkout"
-              className="block mt-4 text-center bg-indigo-600 text-white py-2 rounded-lg"
+              className="block mt-4 text-center bg-teal text-white py-2 rounded-lg"
             >
               Go to Checkout
             </Link>
