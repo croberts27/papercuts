@@ -10,25 +10,28 @@ import Art from "./pages/art.jsx";
 import Checkout from "./pages/checkout.jsx";
 import Payment from "./pages/payment.jsx";
 import { CartProvider } from "./context/CartContext";
+import StripeProvider from "./context/StripeProvider.jsx";
 
 function App() {
   return (
     <CartProvider>
-      <Router>
-        <>
-          <Header />
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/available-prints" element={<Shop />} />
-            <Route path="/art" element={<Art />} />
-            <Route path="/order-review" element={<Review />} />
-            <Route path="/product/:productId" element={<Product />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </>
-      </Router>
+      <StripeProvider>
+        <Router>
+          <>
+            <Header />
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/available-prints" element={<Shop />} />
+              <Route path="/art" element={<Art />} />
+              <Route path="/order-review" element={<Review />} />
+              <Route path="/product/:productId" element={<Product />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </>
+        </Router>
+      </StripeProvider>
     </CartProvider>
   );
 }

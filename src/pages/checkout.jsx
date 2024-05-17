@@ -1,5 +1,5 @@
 import { useCart } from "../context/CartContext";
-
+import { Link } from "react-router-dom";
 function Checkout() {
   const { cartItems } = useCart();
 
@@ -58,12 +58,13 @@ function Checkout() {
               </li>
             ))}
           </ul>
-          <button
+          <Link
+            to="/payment"
             type="submit"
             className="w-full mt-3 rounded-md border border-transparent bg-teal px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-dpurp focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-pink"
           >
             Continue to Payment
-          </button>
+          </Link>
         </div>
       </div>
     </div>
