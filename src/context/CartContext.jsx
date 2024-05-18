@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const CartContext = createContext();
 
@@ -9,17 +10,19 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [dummyState, setDummyState] = useState(false);
 
   const addToCart = (product) => {
-    console.log("Adding to cart:", product);
-    setCartItems((prevItems) => [...prevItems, product]);
+    const productWithUniqueId = { ...product, cartItemId: uuidv4() }; // Add a unique ID
+    console.log("Adding to cart:", productWithUniqueId);
+    setCartItems((prevItems) => [...prevItems, productWithUniqueId]);
     setIsCartOpen(true);
-    console.log("Cart is open:", isCartOpen); // Debugging log
+    setDummyState((prevState) => !prevState);
   };
 
-  const removeFromCart = (productId) => {
+  const removeFromCart = (cartItemId) => {
     setCartItems((prevItems) =>
-      prevItems.filter((item) => item.id !== productId)
+      prevItems.filter((item) => item.cartItemId !== cartItemId)
     );
   };
 
@@ -28,7 +31,9 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, isCartOpen, toggleCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, isCartOpen, toggleCart }}
+    >
       {children}
     </CartContext.Provider>
   );
