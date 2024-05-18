@@ -14,7 +14,7 @@ function ErrorPage() {
           </p>
           <div className="mt-10 flex justify-center">
             <a
-              href="/shop"
+              href="/available-prints"
               className="text-sm font-semibold leading-7 text-black"
             >
               <span aria-hidden="true">&larr;</span> BACK TO PAPERCUTS!

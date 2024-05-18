@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useState } from "react";
 import { products } from "../pages/shop";
 import { useCart } from "../context/CartContext";
 
 function Purchase({ productId }) {
   const { addToCart } = useCart();
-
+  
   // Find the product object from the products array based on the ID
   const product = products.find(
     (product) => product.id === parseInt(productId)

@@ -1,19 +1,16 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
-import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function CartIcon() {
-  const { cartItems } = useCart();
-  const [isOpen, setIsOpen] = useState(false);
+  const { cartItems, isCartOpen, toggleCart } = useCart();
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  console.log("Cart items:", cartItems); // Debugging log
+  console.log("Is cart open:", isCartOpen); // Debugging log
 
   return (
     <div className="relative">
-      <button onClick={toggleDropdown} className="relative">
+      <button onClick={toggleCart} className="relative">
         <svg
           className="w-8 h-8 text-gray-800"
           fill="none"
@@ -33,7 +30,7 @@ function CartIcon() {
         )}
       </button>
 
-      {isOpen && (
+      {isCartOpen && (
         <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg bg-dpurp shadow-lg">
           <div className="p-4">
             {cartItems.length > 0 ? (

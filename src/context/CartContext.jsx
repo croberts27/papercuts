@@ -8,10 +8,13 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (product) => {
     console.log("Adding to cart:", product);
     setCartItems((prevItems) => [...prevItems, product]);
+    setIsCartOpen(true);
+    console.log("Cart is open:", isCartOpen); // Debugging log
   };
 
   const removeFromCart = (productId) => {
@@ -20,8 +23,12 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const toggleCart = () => {
+    setIsCartOpen((prevOpen) => !prevOpen);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, isCartOpen, toggleCart }}>
       {children}
     </CartContext.Provider>
   );
