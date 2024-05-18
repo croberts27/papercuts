@@ -1,6 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 // imports
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 export const products = [
   {
     id: 1,
@@ -102,6 +104,9 @@ export const products = [
 ];
 
 function Shop() {
+  const { addToCart } = useCart();
+  const [hoveredProductId, setHoveredProductId] = useState(null);
+
   return (
     <div className="bg-pink">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -109,24 +114,34 @@ function Shop() {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <Link
+            <div
               key={product.id}
-              to={`/product/${product.id}`}
-              className="group"
+              className="group relative"
+              onMouseEnter={() => setHoveredProductId(product.id)}
+              onMouseLeave={() => setHoveredProductId(null)}
             >
-              
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-pink xl:aspect-h-8 xl:aspect-w-7">
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </div>
-              <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-              <p className="mt-1 text-lg font-medium text-gray-900">
-                {product.price}
-              </p>
-            </Link>
+              <Link to={`/product/${product.id}`} className="block">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-pink xl:aspect-w-7 xl:aspect-h-8">
+                  <img
+                    src={product.imageSrc}
+                    alt={product.imageAlt}
+                    className="h-full w-full object-cover object-center transition-opacity group-hover:opacity-75"
+                  />
+                </div>
+                <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
+                <p className="mt-1 text-lg font-medium text-gray-900">
+                  {product.price}
+                </p>
+              </Link>
+              {hoveredProductId === product.id && (
+                <button
+                  onClick={() => addToCart(product)}
+                  className="relative inset-0 flex items-center p-1 justify-center bg-dpurp rounded-sm bg-opacity-100 text-black font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              )}
+            </div>
           ))}
         </div>
       </div>

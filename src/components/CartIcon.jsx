@@ -9,7 +9,7 @@ function CartIcon() {
     <div className="relative">
       <button onClick={toggleCart} className="relative">
         <svg
-          className="w-8 h-8 text-gray-800"
+          className="w-8 h-8 text-black"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ function CartIcon() {
       </button>
 
       {isCartOpen && (
-        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg bg-dpurp shadow-lg">
+        <div className="absolute right-0 mt-5 w-64 bg-dpurp border border-black rounded-lg shadow-lg">
           <div className="p-4">
             {cartItems.length > 0 ? (
               <ul>
@@ -66,7 +66,7 @@ function CartIcon() {
             )}
             <Link
               to="/checkout"
-              className="block mt-4 text-center bg-teal text-white py-2 rounded-lg"
+              className="block mt-4 text-center border-black bg-teal text-black py-2 hover:bg-mgreen shadow-2xl rounded-lg"
             >
               Go to Checkout
             </Link>

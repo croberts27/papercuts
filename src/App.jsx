@@ -14,9 +14,9 @@ import StripeProvider from "./context/StripeProvider.jsx";
 
 function App() {
   return (
-    <CartProvider>
-      <StripeProvider>
-        <Router>
+    <Router>
+      <CartProvider>
+        <StripeProvider>
           <>
             <Header />
             <Routes>
@@ -30,9 +30,9 @@ function App() {
               <Route path="*" element={<Error />} />
             </Routes>
           </>
-        </Router>
-      </StripeProvider>
-    </CartProvider>
+        </StripeProvider>
+      </CartProvider>
+    </Router>
   );
 }
 
